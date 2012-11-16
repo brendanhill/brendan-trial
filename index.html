@@ -2,11 +2,35 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Brendan Hill.com</title> 
-        <link rel="stylesheet" href="css/main.css" type="text/css" /> 
+        <title>Brendan Hill.com</title>
     </head> 
     
-    <body id="index" class="home">
+    <body>
+        
         <p>Welcome to the new <strong>"Brendan Hill"</strong> site!</p>
+        
+        <script type="text/x-handlebars" data-template-name="home">
+            <div>
+                <h1 {{action "toggle"}}>Home</h1>
+            </div>
+        </script>
+        
+        <script type="text/x-handlebars" data-template-name="about">
+            <div>
+                <h1 {{action "toggle"}}>About</h1>
+            </div>
+        </script>
+        
+        <script type="text/x-handlebars" data-template-name="application">
+            <div>
+                {{outlet}}
+            </div>
+        </script>
+
+        <script src="libs/jquery.js"></script>
+        <script src="libs/handlebars.js"></script>
+        <script src="libs/ember.js"></script>
+        
+        <script src="application.js"></script>
     </body>
 </html>
