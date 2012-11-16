@@ -11,12 +11,12 @@
         }),
         ApplicationController: Ember.Controller.extend({}),
         
-        HomeController: Ember.Controller.extend(),
+        HomeController: Ember.Controller.extend({}),
         HomeView: Ember.View.extend({
             templateName: 'home'
         }),
         
-        AboutController: Ember.Controller.extend(),
+        AboutController: Ember.Controller.extend({}),
         AboutView: Ember.View.extend({
             templateName: 'about'
         }),
