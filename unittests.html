@@ -5,6 +5,7 @@
         <title>QUnit Example</title>
         <link rel="stylesheet" href="libs/qunit.css">
     </head>
+    
     <body>
         <div id="qunit"></div>
         <script src="libs/qunit.js"></script>
@@ -13,6 +14,25 @@
         <script src="libs/jquery.js"></script>
         <script src="libs/handlebars.js"></script>
         <script src="libs/ember.js"></script>
+        
+        <script type="text/x-handlebars" data-template-name="home">
+            <div>
+                <h1 {{action "toggle"}}>Home</h1>
+            </div>
+        </script>
+        
+        <script type="text/x-handlebars" data-template-name="about">
+            <div>
+                <h1 {{action "toggle"}}>About</h1>
+            </div>
+        </script>
+        
+        <script type="text/x-handlebars" data-template-name="application">
+            <div>
+                {{outlet}}
+            </div>
+        </script>
+        
         
         <script src="application.js"></script>
     </body>
