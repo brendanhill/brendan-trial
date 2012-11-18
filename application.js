@@ -1,6 +1,6 @@
 /*global Ember $*/
 (function() {
-    'use strict'
+    'use strict';
     
     var MySite;
     
@@ -24,14 +24,13 @@
         Router: Ember.Router.extend({
             root: Ember.Route.extend({
                 toggle: function(router, event) {
-                    console.log();
                     router.transitionTo(router.currentState.next);
                 },
                 
                 home: Ember.Route.extend({
                     route: '/',
                     connectOutlets: function(router, event) {
-                        console.log('in home');
+                        //console.log('in home');
                         router.get('applicationController').connectOutlet('home');
                     },
                     next: 'about'
@@ -41,7 +40,7 @@
                     next: 'home',
                     route: '/about',
                     connectOutlets: function(router, event) {
-                        console.log('in about');
+                        //console.log('in about');
                         router.get('applicationController').connectOutlet('about');
 //                        router.get('sidebarController').connectOutlet('sidebar');
 //                        router.get('contentController').connectOutlet('content');
